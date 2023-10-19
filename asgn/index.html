@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <header>
+        <h1>Pizza Order Form</h1>
+    </header>
+    <main>
+        <form action="process.php" method="post">
+            <div class="form-container">
+                <div class="form-inputs">
+                    <fieldset>
+                        <legend>Order Details</legend>
+                        <label for="pizza-count">Number of Pizzas:</label>
+                        <input type="number" id="pizza-count" name="pizza-count" required>
+                        
+                        <label for="pizza-size">Size of Pizza:</label>
+                        <select id="pizza-size" name="pizza-size">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+
+                        <label>Shape of Pizza:</label>
+                        <input type="radio" id="round" name="shape" value="round" checked>
+                        <label for="round">Round</label>
+                        <input type="radio" id="square" name="shape" value="square">
+                        <label for="square">Square</label>
+                        
+                        <label>Toppings:</label>
+                        <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                        <label for="pepperoni">Pepperoni</label>
+                        <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                        <label for="mushrooms">Mushrooms</label>
+                        <input type="checkbox" id="olives" name="toppings" value="olives">
+                        <label for="olives">Olives</label>
+
+                        <label for="crust">Crust Type:</label>
+                        <select id="crust" name="crust">
+                            <option value="deep-dish">Deep Dish</option>
+                            <option value="thin-crust">Thin Crust</option>
+                            <option value="regular">Regular</option>
+                        </select>
+                        
+                        <label for="order-type">Order Type:</label>
+                        <input type="radio" id="takeout" name="order-type" value="takeout" checked>
+                        <label for="takeout">Takeout</label>
+                        <input type="radio" id="delivery" name="order-type" value="delivery">
+                        <label for="delivery">Delivery</label>
+                        <input type="radio" id="eat-in" name="order-type" value="eat-in">
+                        <label for="eat-in">Eat-in</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Additional Notes</legend>
+                        <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+                    </fieldset>
+
+                    <input type="submit" value="Place Order">
+                    <input type="reset" value="Reset Form">
+                </div>
+                <div class="pizza-image">
+                    <img src="R.png" alt="Pizza Image">
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Pizza House</p>
+    </footer>
+</body>
+</html>
